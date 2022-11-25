@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>Project2a - Movie Information APP</title>
+</head>
+<body> <div class="sisalto">
+    <img src="img/logo2.png" alt="Finnkinon logo" width="70" height="70"><h1>Finnkinon Tarjonta</h1>
+<br>
+<br>
+<form name="teatteriLista" id="teatteriLista">
+    
+    <select id="cinema" list="teatterit" name="teatterit" onchange="nayElokuvat()">
+        <option value="">Valitse alue/teatteri:</option>
+        <option value="Pääkaupunkiseutu">Pääkaupunkiseutu</option>
+        <option value="Espoo">Espoo</option>
+        <option value="Espoo: OMENA">Espoo: OMENA</option>
+        <option value="Espoo: SELLO">Espoo: SELLO</option>
+        <option value="Helsinki">Helsinki</option>
+        <option value="Helsinki: ITIS">Helsinki: ITIS</option>
+        <option value="Helsinki: KINOPALATSI">Helsinki: KINOPALATSI</option>
+        <option value="Helsinki: MAXIM">Helsinki: MAXIM</option>
+        <option value="Helsinki: TENNISPALATSI">Helsinki: TENNISPALATSI</option>
+        <option value="Vantaa: FLAMINGO"> Vantaa: FLAMINGO</option>
+        <option value="Jyväskylä: FANTASIA">Jyväskylä: FANTASIA</option>
+        <option value="Kuopio: SCALA">Kuopio: SCALA</option>
+        <option value="Lahti: KUVAPALATSI">Lahti: KUVAPALATSI</option>
+        <option value="Lappeenranta: STRAND">Lappeenranta: STRAND</option>
+        <option value="Oulu: PLAZA">Oulu: PLAZA</option>
+        <option value="Pori: PROMENADI">Pori: PROMENADI</option>
+        <option value="Tampere">Tampere</option>
+        <option value="Tampere: CINE ATLAS">Tampere: CINE ATLAS</option>
+        <option value="Tampere: PLEVNA">Tampere: PLEVNA</option>
+        <option value="Turku ja Raisio">Turku ja Raisio</option>
+        <option value="Turku: KINOPALATSI">Turku: KINOPALATSI</option>
+        <option value="Raisio: LUXE MYLLY">Raisio: LUXE MYLLY</option>
+    </select>
+</form>
+</div>
+<div id="elokuvat"></div>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
