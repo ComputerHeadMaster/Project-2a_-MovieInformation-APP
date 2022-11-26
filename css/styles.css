@@ -10,7 +10,7 @@
     justify-content: center;
     background: #000000;
     font-family: sans-serif;
-    color: azure;
+    color: rgb(206, 206, 206);
   }
   h1 {
     
@@ -20,6 +20,16 @@
     padding-left: 30px;
     padding-right: 30px;
   }
+  a{
+    color: azure;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+	  transition-property: color;
+  	transition-duration: 1s;
+  	transition-timing-function: ease-out;
+  }
+  a:hover {color: gray;}
   .sisalto {
     background: #1a1a1a;
     width: 40%;
@@ -38,7 +48,7 @@
     margin-top: 10px;
   }
   #elokuvat {
-    background: #b50b0b;
+    background: #1a1a1a;
     width: 40%;
     top: 50%;
     
@@ -54,4 +64,19 @@
     position: absolute;
     padding: 30px 20px;
     margin-top: 10px;
+  }
+  td{
+    padding: 5px;
+  }
+
+  .klo{
+    font-size: 35px;
+    color: #ffcc00;
+  }
+  .loppu{
+    font-size: 9.5px;
+  }
+  .kuva{
+    padding-right: 10px;
+    padding-bottom: 10px;
   }

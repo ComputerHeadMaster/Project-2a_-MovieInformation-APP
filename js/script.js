@@ -1,6 +1,10 @@
 //
 
   let teatteriID;
+
+//Tämän päivän lisäys
+  let today = new Date();
+  let date = today.getDate()+'.'+(today.getMonth()+1) + '.' + today.getFullYear();
   
   //Mitä näytetään sivustolle
   function nayElokuvat() {
@@ -108,23 +112,25 @@
   }
 //Mitä tulostetaan sivulle
   function tulostaXML(xml){
-    var i;
-    var xmlData = xml.responseXML;
-    var x = xmlData.getElementsByTagName("Show");
-    var out = "<table>";
+    let i;
+    let xmlData = xml.responseXML;
+    let x = xmlData.getElementsByTagName("Show");
+    let out = "<table>";
   
     //taulukkon teko  
     for(i=0; i<x.length; i++){
       out += 
-        "<tr><td ><img class='kuva' src='" + x[i].getElementsByTagName("EventSmallImagePortrait")[0].childNodes[0].nodeValue + "'></img>" + 
+        "<tr><td ><a href='"+ x[i].getElementsByTagName("EventURL")[0].childNodes[0].nodeValue + "' target='_blank'>"+ "<img class='kuva' src='" + x[i].getElementsByTagName("EventSmallImagePortrait")[0].childNodes[0].nodeValue + "'></img>" + 
         "</a></td><td class='otsikko'><a href='"+ x[i].getElementsByTagName("EventURL")[0].childNodes[0].nodeValue + "' target='_blank'>"+ 
         x[i].getElementsByTagName("Title")[0].childNodes[0].nodeValue +
-        "</a></td><td class='paiva'>" + x[i].getElementsByTagName("dttmShowStart")[0].childNodes[0].nodeValue.slice(5,10) + " " +
-        x[i].getElementsByTagName("dttmShowStart")[0].childNodes[0].nodeValue.slice(11,16) +
-        "<td> Kesto: "+ x[i].getElementsByTagName("LengthInMinutes")[0].childNodes[0].nodeValue + " min <br>" +
-        x[i].getElementsByTagName("TheatreAndAuditorium")[0].childNodes[0].nodeValue +
-        "</td></tr>";
+        "</a><p>" +  x[i].getElementsByTagName("TheatreAndAuditorium")[0].childNodes[0].nodeValue + "</p> <p>" + 
+        x[i].getElementsByTagName("Genres")[0].childNodes[0].nodeValue  + "</p></td><td class='paiva' >" + date + 
+        "<br> <p class='klo'>" +
+        x[i].getElementsByTagName("dttmShowStart")[0].childNodes[0].nodeValue.slice(11,16) + "</p><p class='loppu'>Päättyy n. klo " +
+        x[i].getElementsByTagName("dttmShowEnd")[0].childNodes[0].nodeValue.slice(11,16) +
+        "</p></td></tr>";
 
     } 
     document.getElementById("elokuvat").innerHTML = out;
   }
+  
