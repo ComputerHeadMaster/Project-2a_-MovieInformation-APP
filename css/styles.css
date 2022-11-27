@@ -6,14 +6,12 @@
     width: 100vw;
     min-height: 100vh;
     display: flex;
-   
     justify-content: center;
     background: #000000;
     font-family: sans-serif;
     color: rgb(206, 206, 206);
   }
   h1 {
-    
     color: #ffcc00;
     padding-bottom: 20px;
     padding-top: 10px;
@@ -22,7 +20,7 @@
   }
   a{
     color: azure;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bold;
     text-decoration: none;
 	  transition-property: color;
@@ -30,6 +28,7 @@
   	transition-timing-function: ease-out;
   }
   a:hover {color: gray;}
+
   .sisalto {
     background: #1a1a1a;
     width: 40%;
@@ -51,16 +50,9 @@
     background: #1a1a1a;
     width: 40%;
     top: 50%;
-    
-    
     max-width: 490px;
     min-width: 410px;
     border-radius: 10px;
-    
-    outline: none;
-    flex-direction: column;
-    align-items: center;
-    
     position: absolute;
     padding: 30px 20px;
     margin-top: 10px;
@@ -77,6 +69,5 @@
     font-size: 9.5px;
   }
   .kuva{
-    padding-right: 10px;
     padding-bottom: 10px;
   }
